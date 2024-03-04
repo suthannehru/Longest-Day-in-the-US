@@ -1,2 +1,5 @@
 # Ignore config.yml
 config.yml
+
+#Ignore output csv file
+output.csv

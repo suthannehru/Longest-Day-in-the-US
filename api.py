@@ -1,5 +1,6 @@
 import requests
 from yaml import safe_load
+import csv
 
 with open("config.yml", 'r') as stream:
     api_values = safe_load(stream)
@@ -14,5 +15,11 @@ headers = {
 }
 
 response = requests.get(url, headers=headers, params=querystring)
+data = response.json()
 
-print(response.json())
+
+with open('output.csv','w') as csv_file:
+    writer = csv.writer(csv_file)
+    writer.writerow(data['sun'].keys())
+    writer.writerow(data['sun'][row] for row in data['sun'].keys())
+
