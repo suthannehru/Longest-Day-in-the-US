@@ -1,0 +1,4 @@
+---
+ api_key: ~
+ api_host: sunset-time-sunrise-time-by-city-rest-api.p.rapidapi.com
+ api_url: https://sunset-time-sunrise-time-by-city-rest-api.p.rapidapi.com/bycoordinates
